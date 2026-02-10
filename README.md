@@ -3,6 +3,7 @@ Distributed Video Face Clustering Pipeline using Unsupervised Learning
 A scalable computer vision system that processes video footage, extracts facial embeddings, and automatically groups similar faces using clustering techniques. Designed with multithreaded processing and production-ready job-based architecture.
 
 ##🚀Features
+
 🎞️ Video frame extraction
 🧑 Face detection using deep learning models
 🔢 Face embedding generation
@@ -14,6 +15,7 @@ A scalable computer vision system that processes video footage, extracts facial 
 📊 Logging and error monitoring
 
 ##🛠️Tech Stack
+
 Python
 OpenCV
 NumPy
@@ -24,22 +26,26 @@ tqdm (Progress tracking)
 Logging (Monitoring)
 
 ##⚙️ Installation
+
  Dependencies
 ```bash
 pip install opencv-python numpy scikit-learn dlib face_recognition imutils pyPiper tqdm
 ```
 ##⚙️ ▶️ Usage
+
  ```bash
 
 ```
 
 ##🧩Clustering Method
+
 This project uses DBSCAN clustering, which:
 Does not require labeled data
 Automatically detects number of unique individuals
 Groups faces based on embedding similarity
 
 ##📊 Output Example
+
 Each folder represents one detected identity cluster.
 ```bash
 ClusteredFaces/
