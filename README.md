@@ -2,12 +2,7 @@
 Distributed Video Face Clustering Pipeline using Unsupervised Learning 
 A scalable computer vision system that processes video footage, extracts facial embeddings, and automatically groups similar faces using clustering techniques. Designed with multithreaded processing and production-ready job-based architecture.
 
-# Unsupervised Face-Clustering Pipeline
-Distributed Video Face Clustering Pipeline using Unsupervised Learning 
-A scalable computer vision system that processes video footage, extracts facial embeddings, and automatically groups similar faces using clustering techniques. Designed with multithreaded processing and production-ready job-based architecture.
-
-#🚀Features
-
+# 🚀Features
 🎞️ Video frame extraction
 🧑 Face detection using deep learning models
 🔢 Face embedding generation
@@ -17,6 +12,10 @@ A scalable computer vision system that processes video footage, extracts facial 
 🖼️ Face montage generation
 🗂️ Job-based output architecture
 📊 Logging and error monitoring
+
+#
+
+
 
 #🛠️Tech Stack
 
