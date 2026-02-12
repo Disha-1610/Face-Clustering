@@ -1,10 +1,13 @@
 flask
 gunicorn
 cloudinary
-opencv-python-headless
+
 numpy
+opencv-python-headless
 scikit-learn
-tqdm
 imutils
+tqdm
+
 face-recognition
-dlib
+
+git+https://github.com/UmSenhorQualquer/pyPiper.git
