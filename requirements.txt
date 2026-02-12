@@ -1,11 +1,10 @@
-Python 3.8+
 flask
+gunicorn
 cloudinary
 opencv-python
 numpy
 scikit-learn
 tqdm
+imutils
 face-recognition
 dlib
-imutils
-gunicorn
