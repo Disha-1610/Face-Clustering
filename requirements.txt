@@ -1,7 +1,7 @@
 flask
 gunicorn
 cloudinary
-opencv-python
+opencv-python-headless
 numpy
 scikit-learn
 tqdm
