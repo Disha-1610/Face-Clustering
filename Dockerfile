@@ -1,7 +1,7 @@
 # Use official Python image
 FROM python:3.10-slim
 
-# Install system dependencies needed for dlib + OpenCV
+# Install system dependencies for dlib + OpenCV
 RUN apt-get update && apt-get install -y \
     build-essential \
     cmake \
@@ -10,22 +10,29 @@ RUN apt-get update && apt-get install -y \
     libx11-dev \
     libgtk-3-dev \
     python3-dev \
+    libgl1 \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Set working directory inside container
+# Set working directory
 WORKDIR /app
 
-# Copy requirements first (for caching)
+# Copy requirements first
 COPY requirements.txt .
 
-# Install Python dependencies
+# Upgrade pip
 RUN pip install --upgrade pip
+
+# Install Python dependencies
 RUN pip install -r requirements.txt
 
 # Copy all project files
 COPY . .
 
-# Expose port Railway uses
+# Railway uses PORT dynamically, not fixed 8000
 EXPOSE 8000
 
 # Start Flask app using Gunicorn
