@@ -1,17 +1,10 @@
 Python 3.8+
-
 OpenCV
-
 NumPy
-
 Scikit-learn
-
 dlib
-
 face_recognition
-
 imutils
-
 pyPiper
-
 tqdm
+flask
