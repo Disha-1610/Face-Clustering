@@ -106,13 +106,14 @@ def cluster_faces():
         logging.error(f"Clustering failed: {e}")
         return jsonify({"error": str(e)}), 500
 
-
-# ---------------- Run Server ----------------
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
-
 cloudinary.config(
     cloud_name=os.getenv("CLOUDINARY_CLOUD_NAME"),
     api_key=os.getenv("CLOUDINARY_API_KEY"),
     api_secret=os.getenv("CLOUDINARY_API_SECRET")
 )
+# ---------------- Run Server ----------------
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
+
+
+
