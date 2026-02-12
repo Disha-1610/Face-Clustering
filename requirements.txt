@@ -1,10 +1,11 @@
 Python 3.8+
-OpenCV
-NumPy
-Scikit-learn
-dlib
-face_recognition
-imutils
-pyPiper
-tqdm
 flask
+cloudinary
+opencv-python
+numpy
+scikit-learn
+tqdm
+face-recognition
+dlib
+imutils
+gunicorn
