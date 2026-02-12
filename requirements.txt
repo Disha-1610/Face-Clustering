@@ -10,4 +10,4 @@ tqdm
 
 face-recognition
 
-git+https://github.com/UmSenhorQualquer/pyPiper.git
+pypiper
