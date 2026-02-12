@@ -3,6 +3,9 @@ import uuid
 import logging
 from flask import Flask, request, jsonify
 
+import cloudinary
+import cloudinary.uploader
+
 from FaceClusteringLibrary import *
 
 # ---------------- Flask App ----------------
@@ -22,7 +25,11 @@ JOBS_FOLDER = "jobs"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(JOBS_FOLDER, exist_ok=True)
 
-
+cloudinary.config(
+    cloud_name=os.getenv("CLOUDINARY_CLOUD_NAME"),
+    api_key=os.getenv("CLOUDINARY_API_KEY"),
+    api_secret=os.getenv("CLOUDINARY_API_SECRET")
+)
 # ---------------- Home Route ----------------
 @app.route("/")
 def home():
@@ -106,14 +113,11 @@ def cluster_faces():
         logging.error(f"Clustering failed: {e}")
         return jsonify({"error": str(e)}), 500
 
-cloudinary.config(
-    cloud_name=os.getenv("CLOUDINARY_CLOUD_NAME"),
-    api_key=os.getenv("CLOUDINARY_API_KEY"),
-    api_secret=os.getenv("CLOUDINARY_API_SECRET")
-)
+
 # ---------------- Run Server ----------------
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
+
 
 
 
