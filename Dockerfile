@@ -3,6 +3,7 @@ FROM python:3.10-slim
 
 # Install system dependencies for dlib + OpenCV
 RUN apt-get update && apt-get install -y \
+    git \
     build-essential \
     cmake \
     libopenblas-dev \
