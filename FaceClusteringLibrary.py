@@ -54,7 +54,7 @@ class FramesGenerator:
 
         return frame
 
-    def GenerateFrames(self, OutputDirectoryPath, frame_interval=1):
+    def GenerateFrames(self, OutputDirectoryPath, frame_interval=10):
         cap = cv2.VideoCapture(self.VideoFootageSource)
 
         fps = cap.get(cv2.CAP_PROP_FPS)
@@ -286,3 +286,4 @@ class FaceImageGenerator:
                     os.path.join(MontageFolderPath, f"Face_{labelID}.jpg"),
                     montage
                 )
+
