@@ -29,7 +29,7 @@ if __name__ == "__main__":
     # ---------- Generate Frames ----------
     try:
         framesGenerator = FramesGenerator(video_path)
-        framesGenerator.GenerateFrames(frames_dir, frame_interval=1)
+        framesGenerator.GenerateFrames(frames_dir, frame_interval=10)
         logging.info("Frames extracted successfully")
     except Exception as e:
         logging.error(f"Frame extraction failed: {e}")
@@ -42,7 +42,7 @@ if __name__ == "__main__":
         FramesProvider("Files source", sourcePath=frames_dir) |
         FaceEncoder("Encode faces") |
         DatastoreManager("Store encoding", encodingsOutputPath=encodings_dir),
-        n_threads=3,
+        n_threads=1,
         quiet=True
     )
 
@@ -73,4 +73,5 @@ if __name__ == "__main__":
         raise
 
     logging.info(f"Job {job_id} completed")
+
 
