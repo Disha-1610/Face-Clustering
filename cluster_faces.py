@@ -7,6 +7,7 @@ import pickle
 import cv2
 import shutil
 import time
+import logging
 
 class FaceClusterUtility:
     def __init__(self, EncodingFilePath, eps=0.5):
@@ -106,3 +107,4 @@ if __name__ == "__main__":
 
 	labelIDs = faceClusterUtility.Cluster()
 	faceImageGenerator.GenerateImages(labelIDs, "ClusteredFaces", "Montage")
+
