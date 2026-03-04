@@ -64,7 +64,11 @@ ClusteredFaces/
 ```
 ## 💼 Real World Applications
 Surveillance analytics
+
 Event media tagging
+
 Identity grouping in video datasets
+
 Dataset creation for supervised training
+
 Security and monitoring systems
